@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.HomeActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBar"
+        android:layout_centerInParent="true"
+        android:lineSpacingExtra="5dp"
+        android:padding="15dp"
+        android:textColor="#000000"
+        android:textStyle="italic" />
+
+    <com.flickr.widget.CustomSwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pagerIndicator">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.flickr.widget.CustomSwipeRefreshLayout>
+
+    <com.flickr.widget.CirclePageIndicator
+        android:id="@+id/pagerIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="15dp"
+        app:fillColor="@color/colorPrimary"
+        app:strokeColor="@android:color/black" />
+</RelativeLayout>
